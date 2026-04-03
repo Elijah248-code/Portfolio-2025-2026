@@ -16,20 +16,24 @@
       progressBar.style.width = ((winScroll / height) * 100) + '%';
     });
 
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
+    // nav-mobile menu
+    const navMobile = document.getElementById('nav-mobile');
     const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+    navMobile.addEventListener('click', () => {
+      navMobile.classList.toggle('active');
       navLinks.classList.toggle('open');
     });
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
+        navMobile.classList.remove('active');
         navLinks.classList.remove('open');
       });
     });
-
+    function closeNavMobile(id) {
+      id = typeof id === 'string' ? id : id.id;
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
     // Typing effect
     const words = ['Fullstack', 'Front-end', 'Back-end', 'Passionné'];
     let wi = 0, ci = 0, deleting = false;

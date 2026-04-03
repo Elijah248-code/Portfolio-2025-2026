@@ -16,13 +16,15 @@
     <div class="nav-logo">
       <span class="logo-bracket">&lt;</span>Dev<span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
     </div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
+      <button class="modal-close" ><a id="close-nav-mobile">✕</a></button><!-- X est souligner en mobile sur PC -->
+      <li><a href="#home">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#projects">Projets</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="nav-mobile" id="nav-mobile" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -112,42 +114,42 @@
         <h2 class="section-title">Stack technique</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
-          <div class="skill-icon"><img id="logo-java" src="logos/logoJava.png" alt="Java" /></div>
-          <h3 class="skill-name">Java</h3>
-          <div class="skill-bar"><div class="skill-fill" style="--w:25%"></div></div>
-          <span class="skill-level">Débutant</span>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="80">
-          <div class="skill-icon"><img id="logo-csharp" src="logos/CsharpLogo.png" alt="C#" /></div>
-          <h3 class="skill-name">C#</h3>
-          <div class="skill-bar"><div class="skill-fill" style="--w:25%"></div></div>
-          <span class="skill-level">Débutant</span>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="160">
-          <div class="skill-icon"><img id="logo-php" src="logos/logoPHP.webp" alt="PHP" /></div>
-          <h3 class="skill-name">PHP</h3>
-          <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
-          <span class="skill-level">Intermédiaire</span>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="240">
-          <div class="skill-icon"><img id="logo-js" src="logos/logoJS.png" alt="JavaScript" /></div>
-          <h3 class="skill-name">JavaScript</h3>
-          <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
-          <span class="skill-level">Intermédiaire</span>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="320">
-          <div class="skill-icon"><img id="logo-sql" src="logos/logoSQL.png" alt="SQL" /></div>
-          <h3 class="skill-name">SQL</h3>
-          <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-          <span class="skill-level">Intermédiaire</span>
-        </div>
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
           <div class="skill-icon"><img id="logo-htmlcss" src="logos/htmlCssLogo.png" alt="HTML / CSS" /></div>
           <h3 class="skill-name">HTML / CSS</h3>
           <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
           <span class="skill-level">Avancé</span>
         </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="320">
+          <div class="skill-icon"><img id="logo-sql" src="logos/logoSQL.png" alt="SQL" /></div>
+          <h3 class="skill-name">SQL</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+          <span class="skill-level">Intermédiaire</span>
+        </div> 
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="240">
+          <div class="skill-icon"><img id="logo-js" src="logos/logoJS.png" alt="JavaScript" /></div>
+          <h3 class="skill-name">JavaScript</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
+          <span class="skill-level">Intermédiaire</span>
+        </div> 
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="160">
+          <div class="skill-icon"><img id="logo-php" src="logos/logoPHP.webp" alt="PHP" /></div>
+          <h3 class="skill-name">PHP</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
+          <span class="skill-level">Intermédiaire</span>
+        </div> 
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="80">
+          <div class="skill-icon"><img id="logo-csharp" src="logos/CsharpLogo.png" alt="C#" /></div>
+          <h3 class="skill-name">C#</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--w:25%"></div></div>
+          <span class="skill-level">Débutant</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon"><img id="logo-java" src="logos/logoJava.png" alt="Java" /></div>
+          <h3 class="skill-name">Java</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--w:25%"></div></div>
+          <span class="skill-level">Débutant</span>
+        </div>    
       </div>
     </div>
   </section>
@@ -164,7 +166,7 @@
         <article class="project-card" data-aos="fade-up" data-aos-delay="0" onclick="openModal('modal-1')">
           <div class="project-img">
             <div class="project-placeholder" style="--c:#10b981">
-              <span><img src="/images/e-commerce.jpg" alt="deskmanager" id="deskmanager"/></span>
+              <img src="./images/deskmanager.jpg" alt="deskmanager" id="deskmanager"/>
             </div>
             <div class="project-overlay">
               <span class="project-open">Voir le projet →</span>
@@ -175,14 +177,14 @@
               <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JS</span>
             </div>
             <h3 class="project-title">Deskmanager</h3>
-            <p class="project-desc">Application de vente en ligne avec gestion des stocks, panier et paiement simulé.</p>
+            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </article>
 
         <article class="project-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('modal-2')">
           <div class="project-img">
             <div class="project-placeholder" style="--c:#3b82f6">
-              <span>📋</span>
+              <span> </span> <!-- A remplacer par une photo -->
             </div>
             <div class="project-overlay">
               <span class="project-open">Voir le projet →</span>
@@ -192,15 +194,15 @@
             <div class="project-tags">
               <span class="tag">Java</span><span class="tag">Spring</span><span class="tag">SQL</span>
             </div>
-            <h3 class="project-title">Gestion de Tâches</h3>
-            <p class="project-desc">Application desktop de gestion de tâches avec authentification et tableau de bord.</p>
+            <h3 class="project-title">GSB</h3>
+            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </article>
 
         <article class="project-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('modal-3')">
           <div class="project-img">
             <div class="project-placeholder" style="--c:#8b5cf6">
-              <span>🌦️</span>
+              <span> </span> <!-- A remplacer par une photo -->
             </div>
             <div class="project-overlay">
               <span class="project-open">Voir le projet →</span>
@@ -211,7 +213,7 @@
               <span class="tag">JavaScript</span><span class="tag">API REST</span>
             </div>
             <h3 class="project-title">Projet 3 ?</h3>
-            <p class="project-desc"></p>
+            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </article>
 
@@ -230,15 +232,15 @@
         <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
           <p class="contact-text">Vous avez un projet, une opportunité d'alternance ou simplement envie d'échanger ? N'hésitez pas à me contacter.</p>
           <div class="contact-links">
-            <a href="mailto:votre@email.com" class="contact-link">
+            <a href="mailto:morais.elijah@email.com" class="contact-link">
               <span class="contact-link-icon">✉️</span> elijah.morais@ecoles-epsi.net
-            </a>
+            </a> <!-- là jsp -->
             <a href="https://github.com/Elijah248-code" target="_blank" class="contact-link">
               <span class="contact-link-icon">🐙</span> Mon GitHub
-            </a>
+            </a> <!-- mettre logo GitHub -->
             <a href="https://www.linkedin.com/in/elijah-morais-350baa329/" target="_blank" class="contact-link">
               <span class="contact-link-icon">💼</span> Mon LinkedIn
-            </a>
+            </a><!-- mettre logo LinkedIn -->
           </div>
         </div>
         <form class="contact-form" data-aos="fade-left" data-aos-delay="200" onsubmit="handleSubmit(event)">
@@ -272,10 +274,10 @@
   <div class="modal-overlay" id="modal-1" onclick="closeModal('modal-1')">
     <div class="modal" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
-      <div class="modal-header" style="--c:#10b981"><span>🛒</span></div>
+      <div class="modal-header" style="--c:#10b981"><span><!-- logo --></span></div>
       <h2 class="modal-title">Deskmanager</h2>
       <div class="modal-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div>
-      <p class="modal-desc">Application complète de vente en ligne développée en PHP avec une base de données MySQL. Fonctionnalités : catalogue produits, panier dynamique, gestion des commandes et interface d'administration.</p>
+      <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
       <div class="modal-actions">
         <a href="#" class="btn btn-primary">Voir le code</a>
         <a href="#" class="btn btn-outline">Démo live</a>
@@ -286,10 +288,10 @@
   <div class="modal-overlay" id="modal-2" onclick="closeModal('modal-2')">
     <div class="modal" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
-      <div class="modal-header" style="--c:#3b82f6"><span>📋</span></div>
-      <h2 class="modal-title">Gestion de Tâches</h2>
+      <div class="modal-header" style="--c:#3b82f6"><span><!-- logo --></span></div>
+      <h2 class="modal-title">GSB</h2>
       <div class="modal-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">SQL</span></div>
-      <p class="modal-desc">Application de gestion de tâches développée en Java avec Spring Boot. Authentification JWT, CRUD complet, tableau de bord avec statistiques et export PDF.</p>
+      <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <div class="modal-actions">
         <a href="#" class="btn btn-primary">Voir le code</a>
         <a href="#" class="btn btn-outline">Démo live</a>
@@ -300,10 +302,10 @@
   <div class="modal-overlay" id="modal-3" onclick="closeModal('modal-3')">
     <div class="modal" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
-      <div class="modal-header" style="--c:#8b5cf6"><span>🌦️</span></div>
-      <h2 class="modal-title">Weather Dashboard</h2>
+      <div class="modal-header" style="--c:#8b5cf6"><span><!-- logo --></span></div>
+      <h2 class="modal-title">Projet 3 ?</h2>
       <div class="modal-tags"><span class="tag">JavaScript</span><span class="tag">API REST</span><span class="tag">CSS3</span></div>
-      <p class="modal-desc">Dashboard météo consommant l'API OpenWeatherMap. Affichage des prévisions sur 7 jours, géolocalisation, graphiques de température et interface responsive.</p>
+      <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <div class="modal-actions">
         <a href="#" class="btn btn-primary">Voir le code</a>
         <a href="#" class="btn btn-outline">Démo live</a>
