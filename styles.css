@@ -590,3 +590,27 @@ body {
     width: 90%;
     margin: 0 auto;
 }
+.githublogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.hopeinboxlogo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 20%;
+}
+.gsb-logo {
+  width: 192px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 30%;
+}
+.avatar-elijah {
+  margin-top: 7px;
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 100%;
+}
